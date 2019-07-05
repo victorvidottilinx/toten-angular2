@@ -1,0 +1,232 @@
+<!-- Modal Decoração -->
+
+<div #template *ngIf="mostrarProdutos == 'decoracao'">
+  <div class="modal-header">
+    <h5 class="modal-title" id="exampleModalCenterTitle">Decoração</h5>
+    <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="onClose()">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+
+
+      <div  class="container-fluid">
+          <div class="row">
+                <div class="col-md-3 align-items-center box-produto">
+                        <a (click)="onMostrarProdutos('gaveteiros')" class="link-produto" data-toggle="modal" data-target="#exampleProdutoModal1" class=""><div class="thumb-produto"><img src="assets/images/gaveteiros.png" alt="image"></div><p>Gaveteiros, cadeiras e estantes</p></a>
+                </div>
+                <div class="col-md-3 align-items-center box-produto">
+                        <a (click)="onMostrarProdutos('tapetes')" href="#" class="link-produto" data-toggle="modal" data-target="#exampleProdutoModal1" class=""><div class="thumb-produto"><img src="assets/images/tapetes-e-cortinas.png" alt="image"></div><p>Tapetes e cortinas</p></a>
+                </div>
+                <div class="col-md-3 align-items-center box-produto">
+                        <a href="#" class="link-produto" data-toggle="modal" data-target="#exampleProdutoModal1" class=""><div class="thumb-produto"><img src="assets/images/papel-de-parede.png" alt="image"></div><p>Papel de parede e adesivos</p></a>
+                </div>
+                <div class="col-md-3 align-items-center box-produto">
+                        <a href="#" class="link-produto" data-toggle="modal" data-target="#exampleProdutoModal1" class=""><div class="thumb-produto"><img src="assets/images/decoracao-criativa.png" alt="image"></div><p>Decoração criativa</p></a>
+                </div>
+                <div class="col-md-3 align-items-center box-produto">
+                      <a href="#" class="link-produto" data-toggle="modal" data-target="#exampleProdutoModal1" class=""><div class="thumb-produto"><img src="assets/images/almofadas.png" alt="image"></div><p>Almofadas, capas e mantas</p></a>
+              </div>
+              <div class="col-md-3 align-items-center box-produto">
+                      <a href="#" class="link-produto" data-toggle="modal" data-target="#exampleProdutoModal1" class=""><div class="thumb-produto"><img src="assets/images/luminarias.png" alt="image"></div><p>Luminárias</p></a>
+              </div>
+
+
+            </div>
+      </div>
+
+
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-secondary" data-dismiss="modal" (click)="onClose()">Fechar</button>
+  </div>
+</div>
+
+
+
+
+
+
+
+<div *ngIf="mostrarProdutos == 'gaveteiros'" #template2>
+<div  class="modal-header">
+    <h5 class="modal-title" id="exampleModalCenterTitle">Gavateiros, Cadeiras e Estantes</h5>
+    <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="onClose2()">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+
+  <div class="container-fluid">
+          <div class="row">
+                <div class="col-md-3 align-items-center">
+                        <img class="produto-img" src="assets/images/thumb-lightbox-produtos.png" />
+                        <p class="produto-texto">Piso Rotocolor Angra<br>
+                             44,75x44,75 bege claro<br>
+                             Formigres</p>
+                             <p class="preço">10,90</p>
+                             <a (click)="openModal()" class="btn-produto-lightbox" href="#" data-toggle="modal" data-target="#exampleModal">Colocar na Cesta</a>
+                     </div>
+                     <div class="col-md-3 align-items-center">
+                             <img class="produto-img" src="assets/images/thumb-lightbox-produtos.png" />
+                             <p class="produto-texto">Piso Rotocolor Angra<br>
+                                  44,75x44,75 bege claro<br>
+                                  Formigres</p>
+                                  <p class="preço">10,90</p>
+                                  <a class="btn-produto-lightbox" href="#" data-toggle="modal" data-target="#exampleModal">Colocar na Cesta</a>
+                          </div>
+                          <div class="col-md-3 align-items-center">
+                                <img class="produto-img" src="assets/images/thumb-lightbox-produtos.png" />
+                                <p class="produto-texto">Piso Rotocolor Angra<br>
+                                     44,75x44,75 bege claro<br>
+                                     Formigres</p>
+                                     <p class="preço">10,90</p>
+                                     <a class="btn-produto-lightbox" href="#" data-toggle="modal" data-target="#exampleModal">Colocar na Cesta</a>
+                             </div>
+                             <div class="col-md-3 align-items-center">
+                                    <img class="produto-img" src="assets/images/thumb-lightbox-produtos.png" />
+                                    <p class="produto-texto">Piso Rotocolor Angra<br>
+                                         44,75x44,75 bege claro<br>
+                                         Formigres</p>
+                                         <p class="preço">10,90</p>
+                                         <a class="btn-produto-lightbox" href="#" data-toggle="modal" data-target="#exampleModal">Colocar na Cesta</a>
+                                 </div>
+                                 <div class="col-md-3 align-items-center">
+                                        <img class="produto-img" src="assets/images/thumb-lightbox-produtos.png" />
+                                        <p class="produto-texto">Piso Rotocolor Angra<br>
+                                             44,75x44,75 bege claro<br>
+                                             Formigres</p>
+                                             <p class="preço">10,90</p>
+                                             <a class="btn-produto-lightbox" href="#" data-toggle="modal" data-target="#exampleModal">Colocar na Cesta</a>
+                                     </div>
+                                     <div class="col-md-3 align-items-center">
+                                            <img class="produto-img" src="assets/images/thumb-lightbox-produtos.png" />
+                                            <p class="produto-texto">Piso Rotocolor Angra<br>
+                                                 44,75x44,75 bege claro<br>
+                                                 Formigres</p>
+                                                 <p class="preço">10,90</p>
+                                                 <a class="btn-produto-lightbox" href="#" data-toggle="modal" data-target="#exampleModal">Colocar na Cesta</a>
+                                         </div>
+                                         <div class="col-md-3 align-items-center">
+                                                <img class="produto-img" src="assets/images/thumb-lightbox-produtos.png" />
+                                                <p class="produto-texto">Piso Rotocolor Angra<br>
+                                                     44,75x44,75 bege claro<br>
+                                                     Formigres</p>
+                                                     <p class="preço">10,90</p>
+                                                     <a class="btn-produto-lightbox" href="#" data-toggle="modal" data-target="#exampleModal">Colocar na Cesta</a>
+                                             </div>
+                                             <div class="col-md-3 align-items-center">
+                                                    <img class="produto-img" src="assets/images/thumb-lightbox-produtos.png" />
+                                                    <p class="produto-texto">Piso Rotocolor Angra<br>
+                                                         44,75x44,75 bege claro<br>
+                                                         Formigres</p>
+                                                         <p class="preço">10,90</p>
+                                                         <a class="btn-produto-lightbox" href="#" data-toggle="modal" data-target="#exampleModal">Colocar na Cesta</a>
+                                                 </div>
+                                                 <div class="col-md-3 align-items-center">
+                                                        <img class="produto-img" src="assets/images/thumb-lightbox-produtos.png" />
+                                                        <p class="produto-texto">Piso Rotocolor Angra<br>
+                                                             44,75x44,75 bege claro<br>
+                                                             Formigres</p>
+                                                             <p class="preço">10,90</p>
+                                                             <a class="btn-produto-lightbox" href="#" data-toggle="modal" data-target="#exampleModal">Colocar na Cesta</a>
+                                                     </div>
+                                                     <div class="col-md-3 align-items-center">
+                                                            <img class="produto-img" src="assets/images/thumb-lightbox-produtos.png" />
+                                                            <p class="produto-texto">Piso Rotocolor Angra<br>
+                                                                 44,75x44,75 bege claro<br>
+                                                                 Formigres</p>
+                                                                 <p class="preço">10,90</p>
+                                                                 <a class="btn-produto-lightbox" href="#" data-toggle="modal" data-target="#exampleModal">Colocar na Cesta</a>
+                                                           </div>
+            </div>
+  </div>
+
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-secondary" data-dismiss="modal" (click)="onMostrarProdutos('decoracao')">Voltar</button>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+<div *ngIf="mostrarProdutos == 'tapetes'" #template2>
+  <div  class="modal-header">
+      <h5 class="modal-title" id="exampleModalCenterTitle">Tapetes e Cortinas</h5>
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="onClose2()">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+
+    <div class="container-fluid">
+            <div class="row">
+
+
+
+                                   <div class="col-md-3 align-items-center">
+                                          <img class="produto-img" src="assets/images/thumb-lightbox-produtos.png" />
+                                          <p class="produto-texto">Piso Rotocolor Angra<br>
+                                               44,75x44,75 bege claro<br>
+                                               Formigres</p>
+                                               <p class="preço">10,90</p>
+                                               <a class="btn-produto-lightbox" href="#" data-toggle="modal" data-target="#exampleModal">Colocar na Cesta</a>
+                                       </div>
+                                       <div class="col-md-3 align-items-center">
+                                              <img class="produto-img" src="assets/images/thumb-lightbox-produtos.png" />
+                                              <p class="produto-texto">Piso Rotocolor Angra<br>
+                                                   44,75x44,75 bege claro<br>
+                                                   Formigres</p>
+                                                   <p class="preço">10,90</p>
+                                                   <a class="btn-produto-lightbox" href="#" data-toggle="modal" data-target="#exampleModal">Colocar na Cesta</a>
+                                           </div>
+                                           <div class="col-md-3 align-items-center">
+                                                  <img class="produto-img" src="assets/images/thumb-lightbox-produtos.png" />
+                                                  <p class="produto-texto">Piso Rotocolor Angra<br>
+                                                       44,75x44,75 bege claro<br>
+                                                       Formigres</p>
+                                                       <p class="preço">10,90</p>
+                                                       <a class="btn-produto-lightbox" href="#" data-toggle="modal" data-target="#exampleModal">Colocar na Cesta</a>
+                                               </div>
+                                               <div class="col-md-3 align-items-center">
+                                                      <img class="produto-img" src="assets/images/thumb-lightbox-produtos.png" />
+                                                      <p class="produto-texto">Piso Rotocolor Angra<br>
+                                                           44,75x44,75 bege claro<br>
+                                                           Formigres</p>
+                                                           <p class="preço">10,90</p>
+                                                           <a class="btn-produto-lightbox" href="#" data-toggle="modal" data-target="#exampleModal">Colocar na Cesta</a>
+                                                   </div>
+                                                   <div class="col-md-3 align-items-center">
+                                                          <img class="produto-img" src="assets/images/thumb-lightbox-produtos.png" />
+                                                          <p class="produto-texto">Piso Rotocolor Angra<br>
+                                                               44,75x44,75 bege claro<br>
+                                                               Formigres</p>
+                                                               <p class="preço">10,90</p>
+                                                               <a class="btn-produto-lightbox" href="#" data-toggle="modal" data-target="#exampleModal">Colocar na Cesta</a>
+                                                       </div>
+                                                       <div class="col-md-3 align-items-center">
+                                                              <img class="produto-img" src="assets/images/thumb-lightbox-produtos.png" />
+                                                              <p class="produto-texto">Piso Rotocolor Angra<br>
+                                                                   44,75x44,75 bege claro<br>
+                                                                   Formigres</p>
+                                                                   <p class="preço">10,90</p>
+                                                                   <a class="btn-produto-lightbox" href="#" data-toggle="modal" data-target="#exampleModal">Colocar na Cesta</a>
+                                                             </div>
+              </div>
+    </div>
+
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-secondary" data-dismiss="modal" (click)="onMostrarProdutos('decoracao')">Voltar</button>
+    </div>
+  </div>
+
+
+
+
+

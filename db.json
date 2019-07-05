@@ -1,0 +1,16 @@
+{
+  "categorias": [
+    {
+      "id": 1,
+      "nome": "DSFSDFSDFSDFSDFS",
+      "popup": "this.deleteModal",
+      "src": "assets/images/pisos-e-revestimentos.png"
+    },
+    {
+      "id": 2,
+      "nome": "fsdfdsf",
+      "popup": "this.deleteModal",
+      "src": "assets/images/pisos-e-revestimentos.png"
+    }
+  ]
+}

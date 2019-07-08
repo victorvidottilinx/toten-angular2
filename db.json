@@ -4,12 +4,21 @@
       "id": 1,
       "nome": "DSFSDFSDFSDFSDFS",
       "popup": "this.deleteModal",
+      "popup2": "{ class: 'modal-lg modal-dialog' }",
       "src": "assets/images/pisos-e-revestimentos.png"
     },
     {
       "id": 2,
       "nome": "fsdfdsf",
       "popup": "this.deleteModal",
+      "popup2": "{ class: 'modal-lg modal-dialog' }",
+      "src": "assets/images/pisos-e-revestimentos.png"
+    },
+    {
+      "id": 3,
+      "nome": "ETZUBA",
+      "popup": "this.deleteModal",
+      "popup2": "{ class: 'modal-lg modal-dialog' }",
       "src": "assets/images/pisos-e-revestimentos.png"
     }
   ]

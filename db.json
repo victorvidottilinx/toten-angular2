@@ -3,7 +3,7 @@
     {
       "id": 1,
       "nome": "DSFSDFSDFSDFSDFS",
-      "popup": "this.deleteModal",
+      "popup": "deleteModal",
       "popup2": "{ class: 'modal-lg modal-dialog' }",
       "src": "assets/images/pisos-e-revestimentos.png"
     },
@@ -16,7 +16,7 @@
     },
     {
       "id": 3,
-      "nome": "ETZUBA",
+      "nome": "dfslf",
       "popup": "this.deleteModal",
       "popup2": "{ class: 'modal-lg modal-dialog' }",
       "src": "assets/images/pisos-e-revestimentos.png"

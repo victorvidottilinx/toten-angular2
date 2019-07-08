@@ -137,17 +137,7 @@
 
 
 <!-- template -->
-        <ng-template #deleteModal>
-            <div class="modal-header">
-              <h4 class="modal-title pull-left">Modal</h4>
-              <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-              This is a modal.
-            </div>
-          </ng-template>
+
 
           <ng-template #deleteModal1>
               <div class="modal-header">
@@ -181,6 +171,11 @@
                     <span class="two"></span>
                     <span class="three"></span>
                 </div>
+
+
+
+
+
                 <!-- <div class="lds-spinner">
                   <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
                 </div> -->
@@ -192,7 +187,7 @@
             <div class="row" *ngIf="categorias$ | async as categorias; else loadingError">
 
                 <div *ngFor="let categoria of categorias" class="col-md-3 align-items-center box-produto">
-                    <a (click)="openModal4(categoria.popup)" href="#" class="link-produto" data-toggle="modal" data-target="#exampleModalCenter1"><div class="thumb-produto"><img src="{{ categoria.src }}" alt="image"></div><p>{{ categoria.nome }}</p></a>
+                    <a (click)="openModal4('ProdutosModalDecoracaoComponent', { class: 'modal-lg modal-dialog' })" href="#" class="link-produto" data-toggle="modal" data-target="#exampleModalCenter1"><div class="thumb-produto"><img src="{{ categoria.src }}" alt="image"></div><p>{{ categoria.nome }}</p></a>
                 </div>
 
 
@@ -246,7 +241,17 @@
              </div>
         </div>
 
-
+        <ng-template #deleteModal>
+          <div class="modal-header">
+            <h4 class="modal-title pull-left">Modal</h4>
+            <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            This is a modal.
+          </div>
+        </ng-template>
 
 
 

@@ -23,6 +23,10 @@ export class AppComponent implements OnInit {
   // mostrar popup no template
   @ViewChild('deleteModal') deleteModal;
 
+  // categoria selecionada
+  categoriaSelecionada: Categoria;
+
+
   // categorias: Categoria[];
 
   categorias$: Observable<Categoria[]>;
@@ -85,8 +89,9 @@ export class AppComponent implements OnInit {
     this.bsModalRef = this.modalService.show(ProdutosModalDecoracaoComponent, { class: 'modal-lg modal-dialog' });
   }
 
-  openModal4(categoria) {
-    this.bsModalRef = this.modalService.show(categoria, { class: 'modal-lg modal-dialog' });
+  openModal4(categoria, x) {
+    this.categoriaSelecionada = categoria;
+    this.bsModalRef = this.modalService.show(categoria, x);
   }
 
 }

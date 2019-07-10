@@ -19,7 +19,7 @@ export class AppProdutoCategoriasService {
   list() {
     return this.http.get<Categoria[]>(this.API)
     .pipe(
-      delay (2000),
+      //delay (2000),
       take(1),
       tap(console.log)
     );

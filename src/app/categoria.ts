@@ -1,6 +1,7 @@
+
 export interface Categoria {
   id: number;
   nome: string;
-  template: string;
+  popup: string;
   src: string;
 }

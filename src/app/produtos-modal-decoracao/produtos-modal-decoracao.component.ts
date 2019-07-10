@@ -22,7 +22,7 @@ export class ProdutosModalDecoracaoComponent implements OnInit {
 
   categoria: string[] = ['angular2'];
 
-  mostrarProdutos: string = 'decoracao';
+  mostrarProdutos: string = 'pisos-e-revestimentos';
 
   // modalRef2: BsModalRef | null;
   // modalRef: BsModalRef;

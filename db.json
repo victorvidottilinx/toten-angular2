@@ -2,24 +2,28 @@
   "categorias": [
     {
       "id": 1,
-      "nome": "DSFSDFSDFSDFSDFS",
-      "popup": "deleteModal",
+      "nome": "Pisos e Revestimentos",
+      "popup": "ProdutosModalDecoracaoComponent",
       "popup2": "{ class: 'modal-lg modal-dialog' }",
       "src": "assets/images/pisos-e-revestimentos.png"
     },
     {
       "id": 2,
-      "nome": "fsdfdsf",
+      "nome": "Climatização",
       "popup": "this.deleteModal",
-      "popup2": "{ class: 'modal-lg modal-dialog' }",
-      "src": "assets/images/pisos-e-revestimentos.png"
+      "src": "assets/images/climatizacao.png"
     },
     {
       "id": 3,
-      "nome": "dfslf",
+      "nome": "Portas e Janelas",
       "popup": "this.deleteModal",
-      "popup2": "{ class: 'modal-lg modal-dialog' }",
-      "src": "assets/images/pisos-e-revestimentos.png"
+      "src": "assets/images/thumb-produto.png"
+    },
+    {
+      "id": 4,
+      "nome": "Ferragens",
+      "popup": "this.deleteModal",
+      "src": "assets/images/thumb-produto.png"
     }
   ]
 }

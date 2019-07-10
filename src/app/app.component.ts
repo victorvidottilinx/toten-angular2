@@ -2,7 +2,7 @@ import { Categoria } from './categoria';
 
 
 import { ProdutosModalDecoracaoComponent } from './produtos-modal-decoracao/produtos-modal-decoracao.component';
-import { Component, OnInit, TemplateRef, ViewChild,  } from '@angular/core';
+import { Component, OnInit, TemplateRef, ViewChild, AfterViewInit, OnChanges} from '@angular/core';
 import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal';
 import { AlertModalComponent } from './shared/alert-modal/alert-modal.component';
 import { OutletModalComponent } from './shared/outlet-modal/outlet-modal.component';
@@ -20,7 +20,9 @@ export class AppComponent implements OnInit {
   title = 'primeiro-projeto';
   bsModalRef: BsModalRef;
 
+
   // mostrar popup no template
+  // deleteModalRef: BsModalRef;
   @ViewChild('deleteModal') deleteModal;
 
   // categoria selecionada
@@ -31,6 +33,7 @@ export class AppComponent implements OnInit {
 
   categorias$: Observable<Categoria[]>;
   error$ = new Subject<boolean>();
+
 
   constructor(private modalService: BsModalService,
               private service: AppProdutoCategoriasService) {}
@@ -47,6 +50,8 @@ export class AppComponent implements OnInit {
     this.onRefresh()
 
   }
+  
+  
 
   onRefresh(){
     this.categorias$ = this.service.list()
@@ -85,15 +90,21 @@ export class AppComponent implements OnInit {
     this.bsModalRef = this.modalService.show(ProdutosModalDecoracaoComponent, { class: 'modal-lg modal-dialog' });
   }
 
-  openModal3() {
+  openModal3(categoria) {
+    this.categoriaSelecionada = categoria;
     this.bsModalRef = this.modalService.show(ProdutosModalDecoracaoComponent, { class: 'modal-lg modal-dialog' });
   }
 
-  openModal4(categoria, x) {
-    this.categoriaSelecionada = categoria;
-    this.bsModalRef = this.modalService.show(categoria, x);
+  // openModal4() {
+  //   this.bsModalRef = this.modalService.show();
+  // }
+
+
+  onClose4() {
+    this.deleteModal.hide();
   }
 
-}
 
+
+}
 

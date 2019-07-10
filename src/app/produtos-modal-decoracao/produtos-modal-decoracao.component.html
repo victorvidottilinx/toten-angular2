@@ -1,6 +1,6 @@
 <!-- Modal Decoração -->
 
-<div #template *ngIf="mostrarProdutos == 'decoracao'">
+<div #template *ngIf="mostrarProdutos == 'pisos-e-revestimentos'">
   <div class="modal-header">
     <h5 class="modal-title" id="exampleModalCenterTitle">Decoração</h5>
     <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="onClose()">
@@ -13,7 +13,7 @@
       <div  class="container-fluid">
           <div class="row">
                 <div class="col-md-3 align-items-center box-produto">
-                        <a (click)="onMostrarProdutos('gaveteiros')" class="link-produto" data-toggle="modal" data-target="#exampleProdutoModal1" class=""><div class="thumb-produto"><img src="assets/images/gaveteiros.png" alt="image"></div><p>Gaveteiros, cadeiras e estantes</p></a>
+                        <a href="#" (click)="onMostrarProdutos('gaveteiros')" class="link-produto" data-toggle="modal" data-target="#exampleProdutoModal1" class=""><div class="thumb-produto"><img src="assets/images/gaveteiros.png" alt="image"></div><p>Gaveteiros, cadeiras e estantes</p></a>
                 </div>
                 <div class="col-md-3 align-items-center box-produto">
                         <a (click)="onMostrarProdutos('tapetes')" href="#" class="link-produto" data-toggle="modal" data-target="#exampleProdutoModal1" class=""><div class="thumb-produto"><img src="assets/images/tapetes-e-cortinas.png" alt="image"></div><p>Tapetes e cortinas</p></a>

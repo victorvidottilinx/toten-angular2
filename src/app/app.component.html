@@ -33,7 +33,7 @@
                             <ul class="navbar-nav ml-auto">
                                 <!--<li class="nav-item"> <a class="nav-link active" href="#estoque">INÍCIO <span class="sr-only">(current)</span></a> </li>-->
                                 <li class="nav-item"> <a class="nav-link btn btn-primary" href="#estoque">CONSULTAR PRODUTOS</a> </li>
-                                <li class="nav-item"> <a class="nav-link btn btn-primary" href="#galeria" data-toggle="modal" data-target="#exampleModalCenter4" (click)="openModal3()">OUTLET</a> </li>
+                                <li class="nav-item"> <a class="nav-link btn btn-primary" href="#galeria" data-toggle="modal" data-target="#exampleModalCenter4" (click)="openModal2(this.templateOutlet)">OUTLET</a> </li>
                                 <li class="nav-item"> <a class="nav-link btn btn-primary" href="#" data-toggle="modal" data-target="#exampleModal" (click)="openModal()">CADASTRAR</a> </li>
                                 <li class="nav-item">
                                     <button class="x-header__minicart x-header__minicart--menu js--minicart-open" title="Carrinho">
@@ -139,17 +139,17 @@
 <!-- template -->
 
 
-          <ng-template #deleteModal>
+          <!-- <ng-template #deleteModal>
               <div class="modal-header">
                 <h4 class="modal-title pull-left">Modal</h4>
-                <button type="button" class="close pull-right" aria-label="Close" (click)="onClose4()">
+                <button type="button" class="close pull-right" aria-label="Close" (click)="onClose4(this.deleteModal)">
                   <span aria-hidden="true">&times;</span>
                 </button>
               </div>
               <div class="modal-body">
                 This is a modal.
               </div>
-            </ng-template>
+            </ng-template> -->
 
 
 
@@ -187,46 +187,48 @@
             <div class="row" *ngIf="categorias$ | async as categorias; else loadingError">
 
                 <div *ngFor="let categoria of categorias" class="col-md-3 align-items-center box-produto">
-                    <a  (click)="openModal3(categoria.nome)" href="#" class="link-produto" data-toggle="modal" data-target="#exampleModalCenter1"><div class="thumb-produto"><img src="{{ categoria.src }}" alt="image"></div><p>{{ categoria.nome }}</p></a>
+                    <a  (click)="openModal4(this.templateProdutos, categoria.template)" href="#" class="link-produto" data-toggle="modal" data-target="#exampleModalCenter1"><div class="thumb-produto"><img src="{{ categoria.src }}" alt="image"></div><p>{{ categoria.nome }}</p></a>
                 </div>
 
 
+              </div>
+
+            </div>
+       </div>
 
 
-                <div class="col-md-3 align-items-center box-produto">
+
+                <!-- <div class="col-md-3 align-items-center box-produto">
                     <a (click)="openModal2()" href="#" class="link-produto" data-toggle="modal" data-target="#exampleModalCenter1"><div class="thumb-produto"><img src="assets/images/pisos-e-revestimentos.png" alt="image"></div><p>Pisos e Revestimentos</p></a>
                     <a href="#" class="link-produto" data-toggle="modal" data-target="#exampleModalCenter1"><div class="thumb-produto"><img src="assets/images/climatizacao.png" alt="image"></div><p>Climatização</p></a>
                     <a href="#" class="link-produto" data-toggle="modal" data-target="#exampleModalCenter1"><div class="thumb-produto"><img src="assets/images/thumb-produto.png" alt="image"></div><p>Portas e Janelas</p></a>
                     <a href="#" class="link-produto" data-toggle="modal" data-target="#exampleModalCenter1"><div class="thumb-produto"><img src="assets/images/thumb-produto.png" alt="image"></div><p>Ferragens</p></a>
                     <a href="#" class="link-produto" data-toggle="modal" data-target="#exampleModalCenter1"><div class="thumb-produto"><img src="assets/images/thumb-produto.png" alt="image"></div><p>Elétrica</p></a>
-                </div>
+                </div> -->
 
-                <div class="col-md-3 align-items-center box-produto">
+                <!-- <div class="col-md-3 align-items-center box-produto">
                     <div>
-                    <!--<img src="assets/images/dualphone.png" alt="dual phone" class="img-fluid">-->
                     <a href="#" class="link-produto" data-toggle="modal" data-target="#exampleModalCenter2"><div class="thumb-produto"><img src="assets/images/tijolo.png" alt="image"></div><p>Materiais de Construção</p></a>
                     <a href="#" class="link-produto" data-toggle="modal" data-target="#exampleModalCenter1"><div class="thumb-produto"><img src="assets/images/thumb-produto.png" alt="image"></div><p>Tintas</p></a>
                     <a href="#" class="link-produto" data-toggle="modal" data-target="#exampleModalCenter1"><div class="thumb-produto"><img src="assets/images/thumb-produto.png" alt="image"></div><p>Área Externa</p></a>
                     <a href="#" class="link-produto" data-toggle="modal" data-target="#exampleModalCenter1"><div class="thumb-produto"><img src="assets/images/thumb-produto.png" alt="image"></div><p>Segurança e Comunicação</p></a>
-
-
-
                     </div>
-                </div>
-                <div class="col-md-3 align-items-center box-produto">
+                </div> -->
+
+
+
+                <!-- <div class="col-md-3 align-items-center box-produto">
                         <div>
                             <a href="#" class="link-produto" data-toggle="modal" data-target="#exampleModalCenter3"><div class="thumb-produto"><img src="assets/images/almofadas.png" alt="image"></div><p>Decoração</p></a>
                             <a href="#" class="link-produto" data-toggle="modal" data-target="#exampleModalCenter1"><div class="thumb-produto"><img src="assets/images/thumb-produto.png" alt="image"></div><p>Organização da Casa</p></a>
                             <a href="#" class="link-produto" data-toggle="modal" data-target="#exampleModalCenter1"><div class="thumb-produto"><img src="assets/images/thumb-produto.png" alt="image"></div><p>Iluminação</p></a>
                             <a href="#" class="link-produto" data-toggle="modal" data-target="#exampleModalCenter1"><div class="thumb-produto"><img src="assets/images/thumb-produto.png" alt="image"></div><p>Cozinha e Lavanderia</p></a>
-
-
                         </div>
-                    </div>
+                    </div> -->
 
 
 
-                    <div class="col-md-3 align-items-center box-produto">
+                    <!-- <div class="col-md-3 align-items-center box-produto">
                             <div>
                                     <a href="#" class="link-produto" data-toggle="modal" data-target="#exampleModalCenter1"><div class="thumb-produto"><img src="assets/images/banheiro.png" alt="image"></div><p>Banheiro</p></a>
                                     <a href="#" class="link-produto" data-toggle="modal" data-target="#exampleModalCenter1"><div class="thumb-produto"><img src="assets/images/thumb-produto.png" alt="image"></div><p>Cozinha</p></a>
@@ -234,193 +236,291 @@
                                     <a href="#" class="link-produto" data-toggle="modal" data-target="#exampleModalCenter1"><div class="thumb-produto"><img src="assets/images/thumb-produto.png" alt="image"></div><p>Hidráulica</p></a>
 
                             </div>
-                        </div>
+                        </div> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Modal Decoração -->
+<ng-template #templateProdutos>
+
+<!-- PISOS E REVESTIMENTOS -->
+<div *ngIf="categoriaSelecionada == 'pisos-e-revestimentos'">
+  <div class="modal-header">
+    <h5 class="modal-title" id="exampleModalCenterTitle">Pisos e Revestimentos</h5>
+    <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="onClose4()">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+
+      <div  class="container-fluid">
+
+          <div class="row" *ngIf="categorias$ | async as categorias; else loadingError">
+
+                  <div *ngFor="let categoria of categorias; let i = index" class="col-md-3 align-items-center box-produto">
+                      <a  (click)="onMostrarProdutos(categoria.subcategoria[index].template)" href="#" class="link-produto" data-toggle="modal" data-target="#exampleProdutoModal1"><div class="thumb-produto"><img src="{{ categoria.subcategoria[0].src }}" alt="image"></div><p class="texto-subcategorias">{{ categoria.subcategoria[index].nome }}</p></a>
+
+                    </div>
+
+          </div>
+
+      </div>
+
+
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-secondary" data-dismiss="modal" (click)="onClose4()">Fechar</button>
+  </div>
+</div>
+<!-- PRODUTOS-pisos-e-revestimentos-->
+<div *ngIf="categoriaSelecionada == 'acabamentos-para-piso'">
+    <div  class="modal-header">
+        <h5 class="modal-title" id="exampleModalCenterTitle">Acabamentos para Piso</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="onClose4()">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+
+      <div class="container-fluid">
+          <div class="row" *ngIf="produtospisoserevestimentos$ | async as produtospisoserevestimentos; else loadingError">
+
+              <div *ngFor="let produtospisoserevestimentos of produtospisoserevestimentos" class="col-md-3 align-items-center">
+                  <img class="produto-img" src="{{ produtospisoserevestimentos.src }}" />
+                  <p class="produto-texto">
+                           {{ produtospisoserevestimentos.nome }}<br>
+                           {{ produtospisoserevestimentos.descricao }}<br>
+                           {{ produtospisoserevestimentos.marca }}</p>
+                           <p class="preço">{{ produtospisoserevestimentos.valor }}</p>
+                           <a (click)="openModal()" class="btn-produto-lightbox" href="#" data-toggle="modal" data-target="#exampleModal">Colocar na Cesta</a>
+              </div>
+          </div>
+      </div>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal" (click)="onMostrarProdutos('pisos-e-revestimentos')">Voltar</button>
+      </div>
+</div>
+
+
+
+
+
+<!-- CLIMATIZACAO -->
+<div *ngIf="categoriaSelecionada == 'climatizacao'">
+    <div class="modal-header">
+      <h5 class="modal-title" id="exampleModalCenterTitle">Climatização</h5>
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="onClose4()">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+
+
+        <div  class="container-fluid">
+            <div class="row">
+                  <div class="col-md-3 align-items-center box-produto">
+                          <a href="#" (click)="onMostrarProdutos('produto1')" class="link-produto" data-toggle="modal" data-target="#exampleProdutoModal1" class=""><div class="thumb-produto"><img src="assets/images/gaveteiros.png" alt="image"></div><p>Gaveteiros, cadeiras e estantes</p></a>
+                  </div>
+                  <div class="col-md-3 align-items-center box-produto">
+                          <a (click)="onMostrarProdutos('tapetes')" href="#" class="link-produto" data-toggle="modal" data-target="#exampleProdutoModal1" class=""><div class="thumb-produto"><img src="assets/images/tapetes-e-cortinas.png" alt="image"></div><p>Tapetes e cortinas</p></a>
+                  </div>
+                  <div class="col-md-3 align-items-center box-produto">
+                          <a href="#" class="link-produto" data-toggle="modal" data-target="#exampleProdutoModal1" class=""><div class="thumb-produto"><img src="assets/images/papel-de-parede.png" alt="image"></div><p>Papel de parede e adesivos</p></a>
+                  </div>
+
+
+
+              </div>
+        </div>
+
+
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-secondary" data-dismiss="modal" (click)="onClose4()">Fechar</button>
+    </div>
+  </div>
+  <!-- PRODUTOS-climatizacao-->
+  <div *ngIf="categoriaSelecionada == 'produto1'" #template2>
+      <div  class="modal-header">
+          <h5 class="modal-title" id="exampleModalCenterTitle">Climatização</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="onClose4()">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+
+        <div class="container-fluid">
+                <div class="row">
+                      <div class="col-md-3 align-items-center">
+                              <img class="produto-img" src="assets/images/thumb-lightbox-produtos.png" />
+                              <p class="produto-texto">Piso Rotocolor Angra<br>
+                                   44,75x44,75 bege claro<br>
+                                   Formigres</p>
+                                   <p class="preço">10,90</p>
+                                   <a (click)="openModal()" class="btn-produto-lightbox" href="#" data-toggle="modal" data-target="#exampleModal">Colocar na Cesta</a>
+                           </div>
+
 
 
                   </div>
-             </div>
         </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!--cesta de produtos-->
-<!-- <div class="section lightbox-produtos lightbox-produtos-none">
-        <div class="container">
-                <div class="section-title">
-
-                        <div class="row">
-                                <div class="col-sm-12 variedades-de-produtos">
-
-                                <a href="#" class="btn-fechar-lightbox">x fechar</a>
-                                <select name="select" class="variedades-de-produtos-select">
-                                        <option value="valor1"selected>Acabamentos para Piso</option>
-                                        <option value="valor2">Argamassa e Rejunte</option>
-                                        <option value="valor3">Pastilhas</option>
-                                        <option value="valor3">Pisos</option>
-                                        <option value="valor3">Porcelanatos</option>
-                                        <option value="valor3">Revestimentos</option>
-                                        <option value="valor3">Peças Especiais</option>
-                                </select>
-                                <select name="select" class="variedades-de-produtos-select">
-                                        <option value="valor1"selected>Rodapés</option>
-                                        <option value="valor2">Soleiras de Porta</option>
-                                   </select>
-                            </div>
-
-                        </div>
-
-                        <div class="row produtos-scroll">
-                            <div class="col-sm-12">
-
-
-                        <div class="row produto-lightbox">
-                            <div class="col-md-3">
-                               <img src="assets/images/thumb-lightbox-produtos.png" />
-                               <p>Piso Rotocolor Angra<br>
-                                    44,75x44,75 bege claro<br>
-                                    Formigres</p>
-                                    <p class="preço">10,90</p>
-                                    <a class="btn-produto-lightbox" href="#" data-toggle="modal" data-target="#exampleModal">Colocar na Cesta</a>
-                            </div>
-                            <div class="col-md-3">
-                                    <img src="assets/images/thumb-lightbox-produtos.png" />
-                                    <p>Piso Rotocolor Angra<br>
-                                         44,75x44,75 bege claro<br>
-                                         Formigres</p>
-                                         <p class="preço">10,90</p>
-                                         <a class="btn-produto-lightbox" href="#" data-toggle="modal" data-target="#exampleModal">Colocar na Cesta</a>
-                                 </div>
-                                 <div class="col-md-3">
-                                        <img src="assets/images/thumb-lightbox-produtos.png" />
-                                        <p>Piso Rotocolor Angra<br>
-                                             44,75x44,75 bege claro<br>
-                                             Formigres</p>
-                                             <p class="preço">10,90</p>
-                                             <a class="btn-produto-lightbox" href="#" data-toggle="modal" data-target="#exampleModal">Colocar na Cesta</a>
-                                     </div>
-                                     <div class="col-md-3">
-                                            <img src="assets/images/thumb-lightbox-produtos.png" />
-                                            <p>Piso Rotocolor Angra<br>
-                                                 44,75x44,75 bege claro<br>
-                                                 Formigres</p>
-                                                 <p class="preço">10,90</p>
-                                                 <a class="btn-produto-lightbox" href="#" data-toggle="modal" data-target="#exampleModal">Colocar na Cesta</a>
-                                         </div>
-                            </div>
-                            <div class="row produto-lightbox">
-                                    <div class="col-md-3">
-                                       <img src="assets/images/thumb-lightbox-produtos.png" />
-                                       <p>Piso Rotocolor Angra<br>
-                                            44,75x44,75 bege claro<br>
-                                            Formigres</p>
-                                            <p class="preço">10,90</p>
-                                            <a class="btn-produto-lightbox" href="#" data-toggle="modal" data-target="#exampleModal">Colocar na Cesta</a>
-                                    </div>
-                                    <div class="col-md-3">
-                                            <img src="assets/images/thumb-lightbox-produtos.png" />
-                                            <p>Piso Rotocolor Angra<br>
-                                                 44,75x44,75 bege claro<br>
-                                                 Formigres</p>
-                                                 <p class="preço">10,90</p>
-                                                 <a class="btn-produto-lightbox" href="#" data-toggle="modal" data-target="#exampleModal">Colocar na Cesta</a>
-                                         </div>
-                                         <div class="col-md-3">
-                                                <img src="assets/images/thumb-lightbox-produtos.png" />
-                                                <p>Piso Rotocolor Angra<br>
-                                                     44,75x44,75 bege claro<br>
-                                                     Formigres</p>
-                                                     <p class="preço">10,90</p>
-                                                     <a class="btn-produto-lightbox" href="#" data-toggle="modal" data-target="#exampleModal">Colocar na Cesta</a>
-                                             </div>
-                                             <div class="col-md-3">
-                                                    <img src="assets/images/thumb-lightbox-produtos.png" />
-                                                    <p>Piso Rotocolor Angra<br>
-                                                         44,75x44,75 bege claro<br>
-                                                         Formigres</p>
-                                                         <p class="preço">10,90</p>
-                                                         <a class="btn-produto-lightbox" href="#" data-toggle="modal" data-target="#exampleModal">Colocar na Cesta</a>
-                                                 </div>
-                                    </div>
-                                    <div class="row produto-lightbox">
-                                            <div class="col-md-3">
-                                               <img src="assets/images/thumb-lightbox-produtos.png" />
-                                               <p>Piso Rotocolor Angra<br>
-                                                    44,75x44,75 bege claro<br>
-                                                    Formigres</p>
-                                                    <p class="preço">10,90</p>
-                                                    <a class="btn-produto-lightbox" href="#" data-toggle="modal" data-target="#exampleModal">Colocar na Cesta</a>
-                                            </div>
-                                            <div class="col-md-3">
-                                                    <img src="assets/images/thumb-lightbox-produtos.png" />
-                                                    <p>Piso Rotocolor Angra<br>
-                                                         44,75x44,75 bege claro<br>
-                                                         Formigres</p>
-                                                         <p class="preço">10,90</p>
-                                                         <a class="btn-produto-lightbox" href="#" data-toggle="modal" data-target="#exampleModal">Colocar na Cesta</a>
-                                                 </div>
-                                                 <div class="col-md-3">
-                                                        <img src="assets/images/thumb-lightbox-produtos.png" />
-                                                        <p>Piso Rotocolor Angra<br>
-                                                             44,75x44,75 bege claro<br>
-                                                             Formigres</p>
-                                                             <p class="preço">10,90</p>
-                                                             <a class="btn-produto-lightbox" href="#" data-toggle="modal" data-target="#exampleModal">Colocar na Cesta</a>
-                                                     </div>
-                                                     <div class="col-md-3">
-                                                            <img src="assets/images/thumb-lightbox-produtos.png" />
-                                                            <p>Piso Rotocolor Angra<br>
-                                                                 44,75x44,75 bege claro<br>
-                                                                 Formigres</p>
-                                                                 <p class="preço">10,90</p>
-                                                                 <a class="btn-produto-lightbox" href="#" data-toggle="modal" data-target="#exampleModal">Colocar na Cesta</a>
-                                                         </div>
-                                            </div>
-
-
-
-
-                        </div>
-                    </div>
-                </div>
-            </div>
         </div>
-</div> -->
-
-
-
-<!-- <div class="section light-bg" id="galeria">
-    <div class="container">
-        <div class="section-title">
-            <h3>OUTLET - Produtos em destaque</h3>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal" (click)="onMostrarProdutos('pisos-e-revestimentos')">Voltar</button>
         </div>
-        <div class="img-gallery owl-carousel owl-theme">
-            <img src="assets/images/1.png" alt="image">
-            <img src="assets/images/2.png" alt="image">
-            <img src="assets/images/3.png" alt="image">
-            <img src="assets/images/screen1.jpg" alt="image">
-        </div>
+  </div>
+
+
+
+
+  <!-- DECORAÇÃO -->
+<div *ngIf="categoriaSelecionada == 'decoracao'">
+    <div class="modal-header">
+      <h5 class="modal-title" id="exampleModalCenterTitle">Decoração</h5>
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="onClose4()">
+        <span aria-hidden="true">&times;</span>
+      </button>
     </div>
-</div>	 -->
+    <div class="modal-body">
+
+
+        <div  class="container-fluid">
+            <div class="row">
+                  <div class="col-md-3 align-items-center box-produto">
+                          <a href="#" (click)="onMostrarProdutos('gaveteiros')" class="link-produto" data-toggle="modal" data-target="#exampleProdutoModal1" class=""><div class="thumb-produto"><img src="assets/images/gaveteiros.png" alt="image"></div><p>Gaveteiros, cadeiras e estantes</p></a>
+                  </div>
+                  <div class="col-md-3 align-items-center box-produto">
+                          <a (click)="onMostrarProdutos('tapetes')" href="#" class="link-produto" data-toggle="modal" data-target="#exampleProdutoModal1" class=""><div class="thumb-produto"><img src="assets/images/tapetes-e-cortinas.png" alt="image"></div><p>Tapetes e cortinas</p></a>
+                  </div>
+                  <div class="col-md-3 align-items-center box-produto">
+                          <a href="#" class="link-produto" data-toggle="modal" data-target="#exampleProdutoModal1" class=""><div class="thumb-produto"><img src="assets/images/papel-de-parede.png" alt="image"></div><p>Papel de parede e adesivos</p></a>
+                  </div>
+                  <div class="col-md-3 align-items-center box-produto">
+                          <a href="#" class="link-produto" data-toggle="modal" data-target="#exampleProdutoModal1" class=""><div class="thumb-produto"><img src="assets/images/decoracao-criativa.png" alt="image"></div><p>Decoração criativa</p></a>
+                  </div>
+                  <div class="col-md-3 align-items-center box-produto">
+                        <a href="#" class="link-produto" data-toggle="modal" data-target="#exampleProdutoModal1" class=""><div class="thumb-produto"><img src="assets/images/almofadas.png" alt="image"></div><p>Almofadas, capas e mantas</p></a>
+                </div>
+                <div class="col-md-3 align-items-center box-produto">
+                        <a href="#" class="link-produto" data-toggle="modal" data-target="#exampleProdutoModal1" class=""><div class="thumb-produto"><img src="assets/images/luminarias.png" alt="image"></div><p>Luminárias</p></a>
+                </div>
+
+
+              </div>
+        </div>
+
+
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-secondary" data-dismiss="modal" (click)="onClose4()">Fechar</button>
+    </div>
+  </div>
+  <!-- PRODUTOS-pisos-e-revestimentos-->
+  <div *ngIf="categoriaSelecionada == 'gaveteiros'" #template2>
+      <div  class="modal-header">
+          <h5 class="modal-title" id="exampleModalCenterTitle">Gavateiros, Cadeiras e Estantes</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="onClose4()">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+
+        <div class="container-fluid">
+                <div class="row">
+                      <div class="col-md-3 align-items-center">
+                              <img class="produto-img" src="assets/images/thumb-lightbox-produtos.png" />
+                              <p class="produto-texto">Piso Rotocolor Angra<br>
+                                   44,75x44,75 bege claro<br>
+                                   Formigres</p>
+                                   <p class="preço">10,90</p>
+                                   <a (click)="openModal()" class="btn-produto-lightbox" href="#" data-toggle="modal" data-target="#exampleModal">Colocar na Cesta</a>
+                           </div>
+
+
+
+                  </div>
+        </div>
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal" (click)="onMostrarProdutos('pisos-e-revestimentos')">Voltar</button>
+        </div>
+  </div>
+
+
+
+
+
+
+
+</ng-template>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -713,9 +813,8 @@
 
 <!-- outlet -->
 <!-- Modal -->
-<div class="modal fade bd-example-modal-xl" id="exampleModalCenter4" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-<div class="modal-dialog modal-dialog-centered modal-dialog modal-xl modal-dialog-scrollable" role="document">
-<div class="modal-content">
+<ng-template #templateOutlet>
+
   <div class="modal-header">
     <h5 class="modal-title" id="exampleModalCenterTitle">Outlet!</h5>
     <!-- campo de busca -->
@@ -725,7 +824,7 @@
 
       </form>
       <!-- btn fechar -->
-      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+      <button (click)="onClose4()" type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
   </div>
@@ -817,12 +916,10 @@
         </div>
 
   <div class="modal-footer">
-    <button type="button" class="btn btn-secondary" data-dismiss="modal">Voltar</button>
+    <button (click)="onClose4()" type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
   </div>
-</div>
-</div>
-</div>
 
+</ng-template>
 
 
 

@@ -2,6 +2,8 @@ json-server --watch db.json
 
 https://www.youtube.com/watch?v=I0CI6KvqobA
 
+https://stackoverflow.com/questions/43773676/how-to-do-ngfor-loop-on-nested-json-object
+
 
 # PrimeiroProjeto
 

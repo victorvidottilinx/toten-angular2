@@ -1,5 +1,3 @@
-import { Categoria } from './categoria';
-
 
 import { ProdutosModalDecoracaoComponent } from './produtos-modal-decoracao/produtos-modal-decoracao.component';
 import { Component, OnInit, TemplateRef, ViewChild, AfterViewInit, OnChanges} from '@angular/core';
@@ -9,6 +7,9 @@ import { OutletModalComponent } from './shared/outlet-modal/outlet-modal.compone
 import { AppProdutoCategoriasService } from './app-produto-categorias.service';
 import { Observable, empty, Subject } from 'rxjs';
 import { catchError } from 'rxjs/operators';
+import { Categoria } from './categoria';
+import { Subcategoria1 } from './subcategorias1';
+import { Produtospisoserevestimentos } from './produtospisoserevestimentos';
 
 
 @Component({
@@ -23,15 +24,19 @@ export class AppComponent implements OnInit {
 
   // mostrar popup no template
   // deleteModalRef: BsModalRef;
-  @ViewChild('deleteModal') deleteModal;
+  // @ViewChild('deleteModal') deleteModal;
+  @ViewChild('templateProdutos') templateProdutos;
+  @ViewChild('templateOutlet') templateOutlet;
 
-  // categoria selecionada
+
+  // categoria selecionada - inicializando a variável
   categoriaSelecionada: Categoria;
 
 
   // categorias: Categoria[];
-
   categorias$: Observable<Categoria[]>;
+  subcategorias1$: Observable<Subcategoria1[]>;
+  produtospisoserevestimentos$: Observable<Produtospisoserevestimentos[]>;
   error$ = new Subject<boolean>();
 
 
@@ -50,11 +55,33 @@ export class AppComponent implements OnInit {
     this.onRefresh()
 
   }
-  
-  
+
+
 
   onRefresh(){
     this.categorias$ = this.service.list()
+    .pipe(
+      catchError(error => {
+        console.error(error);
+        this.error$.next(true);
+        // operador do rxjs catcherror para capturar o erro e retornar outro observable
+        // tslint:disable-next-line: deprecation
+        return empty();
+      })
+    );
+
+    this.subcategorias1$ = this.service.list2()
+    .pipe(
+      catchError(error => {
+        console.error(error);
+        this.error$.next(true);
+        // operador do rxjs catcherror para capturar o erro e retornar outro observable
+        // tslint:disable-next-line: deprecation
+        return empty();
+      })
+    );
+
+    this.produtospisoserevestimentos$ = this.service.list3()
     .pipe(
       catchError(error => {
         console.error(error);
@@ -86,22 +113,31 @@ export class AppComponent implements OnInit {
     this.bsModalRef = this.modalService.show(AlertModalComponent, { class: 'second modal-dialog-centered' });
   }
 
-  openModal2() {
-    this.bsModalRef = this.modalService.show(ProdutosModalDecoracaoComponent, { class: 'modal-lg modal-dialog' });
+  openModal2(template) {
+    this.bsModalRef = this.modalService.show(template, { class: 'modal-lg modal-dialog' });
   }
 
   openModal3(categoria) {
-    this.categoriaSelecionada = categoria;
+    //this.categoriaSelecionada = categoria;
     this.bsModalRef = this.modalService.show(ProdutosModalDecoracaoComponent, { class: 'modal-lg modal-dialog' });
   }
 
-  // openModal4() {
-  //   this.bsModalRef = this.modalService.show();
-  // }
+
+  public openModal4(template, categoria: Categoria) {
+     this.categoriaSelecionada = categoria;
+     // alert (this.categoriaSelecionada);
+     this.bsModalRef = this.modalService.show(template, { class: 'modal-lg modal-dialog' });
+   }
+
+   onMostrarProdutos(subcategoria: Subcategoria1) {
+    this.categoriaSelecionada = subcategoria;
+    // alert (this.categoriaSelecionada);
+  }
+
 
 
   onClose4() {
-    this.deleteModal.hide();
+    this.bsModalRef.hide();
   }
 
 

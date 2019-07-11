@@ -1,3 +1,4 @@
+import { AppComponent } from './../app.component';
 import { Component, OnInit, ViewChild, TemplateRef } from '@angular/core';
 import { BsModalService, BsModalRef, ModalDirective } from 'ngx-bootstrap/modal';
 import { AlertModalComponent } from '../shared/alert-modal/alert-modal.component';
@@ -64,6 +65,8 @@ export class ProdutosModalDecoracaoComponent implements OnInit {
   openModal3(template: TemplateRef<any>) {
     this.bsModalRef = this.modalService.show(template, { class: 'second' });
   }
+
+
 
 
 

@@ -9,7 +9,7 @@
         {
           "id": 1,
           "nome": "Acabamentos para Piso",
-          "template": "acabamentos-para-piso",
+          "template": "acabamentos-para-piso-produtos",
           "src": "assets/images/thumb-produto.png",
           "subcategoria-pisos-e-revestimentos-produtos": [
             {

@@ -15,6 +15,9 @@ import { routing } from './produtos-modal-decoracao/app.routing';
 import { DecoracaoCategoriasComponent } from './produtos-modal-decoracao/decoracao-categorias/decoracao-categorias.component';
 import { HttpClientModule } from '@angular/common/http';
 
+import { KeysPipe } from './keys.pipe';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,6 +26,8 @@ import { HttpClientModule } from '@angular/common/http';
     ProdutosModalDecoracaoComponent,
     DecoracaoProdutosComponent,
     DecoracaoCategoriasComponent,
+    KeysPipe,
+
   ],
   imports: [
     BrowserModule,

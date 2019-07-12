@@ -33,12 +33,16 @@ export class AppComponent implements OnInit {
   categoriaSelecionada: Categoria;
 
 
+
   // categorias: Categoria[];
   categorias$: Observable<Categoria[]>;
   subcategorias1$: Observable<Subcategoria1[]>;
   produtospisoserevestimentos$: Observable<Produtospisoserevestimentos[]>;
   error$ = new Subject<boolean>();
 
+  // pipe
+  // filterargs1 = {categoria: subcategoria};
+  // items = this.categorias$;
 
   constructor(private modalService: BsModalService,
               private service: AppProdutoCategoriasService) {}
@@ -129,10 +133,10 @@ export class AppComponent implements OnInit {
      this.bsModalRef = this.modalService.show(template, { class: 'modal-lg modal-dialog' });
    }
 
-   onMostrarProdutos(subcategoria: Subcategoria1) {
-    this.categoriaSelecionada = subcategoria;
+    onMostrarProdutos(subcategoria: Subcategoria1) {
+     this.categoriaSelecionada = subcategoria;
     // alert (this.categoriaSelecionada);
-  }
+   }
 
 
 

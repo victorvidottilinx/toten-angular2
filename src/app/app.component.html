@@ -282,7 +282,6 @@
                             </div>
                             <p class="texto-subcategorias">{{ subcategoria1.nome }}</p></a>
                       </div>
-
                   </div>
 
           </div>
@@ -310,12 +309,12 @@
 
               <div *ngFor="let categoria of categorias" class="row">
                <div *ngFor="let subcategoria1 of categoria.subcategoria" class="row">
-                <div *ngFor="let produtospisoserevestimentos of categoria.subcategoria.subcategoria-pisos-e-revestimentos-produtos" class="col-md-3 align-items-center">
+                <div *ngFor="let produtospisoserevestimentos of subcategoria1.subcategoria_pisos_e_revestimentos_produtos" class="col-md-3 align-items-center">
 
                 <img class="produto-img" src="{{ produtospisoserevestimentos.src }}" />
                   <p class="produto-texto">
-                           {{ produtospisoserevestimentos.nome }}<br>
-                           {{ produtospisoserevestimentos.descricao }}<br>
+                           {{ produtospisoserevestimentos.nome }}
+                           {{ produtospisoserevestimentos.descricao }}
                            {{ produtospisoserevestimentos.marca }}</p>
                            <p class="preço">{{ produtospisoserevestimentos.valor }}</p>
                            <a (click)="openModal()" class="btn-produto-lightbox" href="#" data-toggle="modal" data-target="#exampleModal">Colocar na Cesta</a>
@@ -341,38 +340,38 @@
 
 <!-- CLIMATIZACAO -->
 <div *ngIf="categoriaSelecionada == 'climatizacao'">
-    <div class="modal-header">
-      <h5 class="modal-title" id="exampleModalCenterTitle">Climatização</h5>
-      <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="onClose4()">
-        <span aria-hidden="true">&times;</span>
-      </button>
-    </div>
-    <div class="modal-body">
-
-
-        <div  class="container-fluid">
-            <div class="row">
-                  <div class="col-md-3 align-items-center box-produto">
-                          <a href="#" (click)="onMostrarProdutos('produto1')" class="link-produto" data-toggle="modal" data-target="#exampleProdutoModal1" class=""><div class="thumb-produto"><img src="assets/images/gaveteiros.png" alt="image"></div><p>Gaveteiros, cadeiras e estantes</p></a>
-                  </div>
-                  <div class="col-md-3 align-items-center box-produto">
-                          <a (click)="onMostrarProdutos('tapetes')" href="#" class="link-produto" data-toggle="modal" data-target="#exampleProdutoModal1" class=""><div class="thumb-produto"><img src="assets/images/tapetes-e-cortinas.png" alt="image"></div><p>Tapetes e cortinas</p></a>
-                  </div>
-                  <div class="col-md-3 align-items-center box-produto">
-                          <a href="#" class="link-produto" data-toggle="modal" data-target="#exampleProdutoModal1" class=""><div class="thumb-produto"><img src="assets/images/papel-de-parede.png" alt="image"></div><p>Papel de parede e adesivos</p></a>
-                  </div>
-
-
-
-              </div>
-        </div>
-
-
-    </div>
-    <div class="modal-footer">
-      <button type="button" class="btn btn-secondary" data-dismiss="modal" (click)="onClose4()">Fechar</button>
-    </div>
+  <div class="modal-header">
+    <h5 class="modal-title" id="exampleModalCenterTitle">Climatização</h5>
+    <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="onClose4()">
+      <span aria-hidden="true">&times;</span>
+    </button>
   </div>
+  <div class="modal-body">
+
+      <div  class="container-fluid">
+
+          <div class="row" *ngIf="categorias$ | async as categorias; else loadingError">
+
+                  <div *ngFor="let categoria of categorias" class="row">
+                      <div *ngFor="let subcategoria1 of categoria.subcategoria" class="col-md-3 align-items-center box-produto">
+                          <a  (click)="onMostrarProdutos(subcategoria1.template)" href="#" class="link-produto" data-toggle="modal" data-target="#exampleProdutoModal1">
+                            <div class="thumb-produto">
+                              <img src="{{ subcategoria1.src }}" alt="image">
+                            </div>
+                            <p class="texto-subcategorias">{{ subcategoria1.nome }}</p></a>
+                      </div>
+                  </div>
+
+          </div>
+
+      </div>
+
+
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-secondary" data-dismiss="modal" (click)="onClose4()">Fechar</button>
+  </div>
+</div>
   <!-- PRODUTOS-climatizacao-->
   <div *ngIf="categoriaSelecionada == 'produto1'" #template2>
       <div  class="modal-header">

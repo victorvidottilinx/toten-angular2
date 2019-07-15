@@ -8,8 +8,9 @@ import { AppProdutoCategoriasService } from './app-produto-categorias.service';
 import { Observable, empty, Subject } from 'rxjs';
 import { catchError } from 'rxjs/operators';
 import { Categoria } from './categoria';
-import { Subcategoria1 } from './subcategorias1';
+import { Subcategoria1 } from './subcategoria1';
 import { Produtospisoserevestimentos } from './produtospisoserevestimentos';
+
 
 
 @Component({
@@ -30,13 +31,13 @@ export class AppComponent implements OnInit {
 
 
   // categoria selecionada - inicializando a variável
-  categoriaSelecionada: Categoria;
+  categoriaSelecionada: any;
 
 
 
   // categorias: Categoria[];
   categorias$: Observable<Categoria[]>;
-  subcategorias1$: Observable<Subcategoria1[]>;
+  subcategoria1$: Observable<Subcategoria1[]>;
   produtospisoserevestimentos$: Observable<Produtospisoserevestimentos[]>;
   error$ = new Subject<boolean>();
 
@@ -74,7 +75,7 @@ export class AppComponent implements OnInit {
       })
     );
 
-    this.subcategorias1$ = this.service.list2()
+    this.subcategoria1$ = this.service.list2()
     .pipe(
       catchError(error => {
         console.error(error);
@@ -122,7 +123,7 @@ export class AppComponent implements OnInit {
   }
 
   openModal3(categoria) {
-    //this.categoriaSelecionada = categoria;
+    // this.categoriaSelecionada = categoria;
     this.bsModalRef = this.modalService.show(ProdutosModalDecoracaoComponent, { class: 'modal-lg modal-dialog' });
   }
 

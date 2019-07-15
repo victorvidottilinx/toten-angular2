@@ -10,13 +10,13 @@
           "id": 1,
           "nome": "Acabamentos para Piso",
           "template": "acabamentos-para-piso-produtos",
-          "src": "assets/images/thumb-produto.png",
-          "subcategoria-pisos-e-revestimentos-produtos": [
+          "src": "assets/images/pisos-e-revestimentos.png",
+          "subcategoria_pisos_e_revestimentos_produtos": [
             {
               "id": 1,
               "nome": "Piso Rotocolor Angra",
               "template": "piso-rotocolor-angra",
-              "descrição": "44,75x44,75 bege claro",
+              "descricao": "44,75x44,75 bege claro",
               "marca": "Formigres",
               "valor": "10,90",
               "src": "assets/images/thumb-lightbox-produtos.png"
@@ -25,7 +25,7 @@
               "id": 2,
               "nome": "Piso Rotocolor Angra",
               "template": "piso-rotocolor-angra",
-              "descrição": "44,75x44,75 bege claro",
+              "descricao": "44,75x44,75 bege claro",
               "marca": "Formigres",
               "valor": "10,90",
               "src": "assets/images/thumb-lightbox-produtos.png"
@@ -34,7 +34,7 @@
               "id": 3,
               "nome": "Piso Rotocolor Angra",
               "template": "piso-rotocolor-angra",
-              "descrição": "44,75x44,75 bege claro",
+              "descricao": "44,75x44,75 bege claro",
               "marca": "Formigres",
               "valor": "10,90",
               "src": "assets/images/thumb-lightbox-produtos.png"
@@ -43,7 +43,7 @@
               "id": 4,
               "nome": "Piso Rotocolor Angra",
               "template": "piso-rotocolor-angra",
-              "descrição": "44,75x44,75 bege claro",
+              "descricao": "44,75x44,75 bege claro",
               "marca": "Formigres",
               "valor": "10,90",
               "src": "assets/images/thumb-lightbox-produtos.png"
@@ -52,7 +52,7 @@
               "id": 5,
               "nome": "Piso Rotocolor Angra",
               "template": "piso-rotocolor-angra",
-              "descrição": "44,75x44,75 bege claro",
+              "descricao": "44,75x44,75 bege claro",
               "marca": "Formigres",
               "valor": "10,90",
               "src": "assets/images/thumb-lightbox-produtos.png"
@@ -61,7 +61,7 @@
               "id": 6,
               "nome": "Piso Rotocolor Angra",
               "template": "piso-rotocolor-angra",
-              "descrição": "44,75x44,75 bege claro",
+              "descricao": "44,75x44,75 bege claro",
               "marca": "Formigres",
               "valor": "10,90",
               "src": "assets/images/thumb-lightbox-produtos.png"
@@ -70,7 +70,7 @@
               "id": 7,
               "nome": "Piso Rotocolor Angra",
               "template": "piso-rotocolor-angra",
-              "descrição": "44,75x44,75 bege claro",
+              "descricao": "44,75x44,75 bege claro",
               "marca": "Formigres",
               "valor": "10,90",
               "src": "assets/images/thumb-lightbox-produtos.png"
@@ -206,115 +206,7 @@
       "template": "decoracao",
       "src": "assets/images/almofadas.png"
     }
-  ],
-
-  "subcategoria-pisos-e-revestimentos": [
-    {
-      "id": 1,
-      "nome": "Acabamentos para Piso",
-      "template": "acabamentos-para-piso",
-      "src": "assets/images/thumb-produto.png"
-    },
-    {
-      "id": 2,
-      "nome": "Argamassa e Rejunte",
-      "template": "argamassa-e-rejunte",
-      "src": "assets/images/thumb-produto.png"
-    },
-    {
-      "id": 3,
-      "nome": "Pastilhas",
-      "template": "pastilhas",
-      "src": "assets/images/thumb-produto.png"
-    },
-    {
-      "id": 4,
-      "nome": "Pisos",
-      "template": "pisos",
-      "src": "assets/images/thumb-produto.png"
-    },
-    {
-      "id": 5,
-      "nome": "Porcelanatos",
-      "template": "porcelanatos",
-      "src": "assets/images/thumb-produto.png"
-    },
-    {
-      "id": 6,
-      "nome": "Revestimentos",
-      "template": "revestimentos",
-      "src": "assets/images/thumb-produto.png"
-    },
-    {
-      "id": 7,
-      "nome": "Peças Especiais",
-      "template": "pecas-especiais",
-      "src": "assets/images/thumb-produto.png"
-    }
-  ],
-  "subcategoria-pisos-e-revestimentos-produtos": [
-    {
-      "id": 1,
-      "nome": "Piso Rotocolor Angra",
-      "template": "piso-rotocolor-angra",
-      "descricao": "44,75x44,75 bege claro",
-      "marca": "Formigres",
-      "valor": "10,90",
-      "src": "assets/images/thumb-lightbox-produtos.png"
-    },
-    {
-      "id": 2,
-      "nome": "Piso Rotocolor Angra",
-      "template": "piso-rotocolor-angra",
-      "descricao": "44,75x44,75 bege claro",
-      "marca": "Formigres",
-      "valor": "10,90",
-      "src": "assets/images/thumb-lightbox-produtos.png"
-    },
-    {
-      "id": 3,
-      "nome": "Piso Rotocolor Angra",
-      "template": "piso-rotocolor-angra",
-      "descricao": "44,75x44,75 bege claro",
-      "marca": "Formigres",
-      "valor": "10,90",
-      "src": "assets/images/thumb-lightbox-produtos.png"
-    },
-    {
-      "id": 4,
-      "nome": "Piso Rotocolor Angra",
-      "template": "piso-rotocolor-angra",
-      "descricao": "44,75x44,75 bege claro",
-      "marca": "Formigres",
-      "valor": "10,90",
-      "src": "assets/images/thumb-lightbox-produtos.png"
-    },
-    {
-      "id": 5,
-      "nome": "Piso Rotocolor Angra",
-      "template": "piso-rotocolor-angra",
-      "descricao": "44,75x44,75 bege claro",
-      "marca": "Formigres",
-      "valor": "10,90",
-      "src": "assets/images/thumb-lightbox-produtos.png"
-    },
-    {
-      "id": 6,
-      "nome": "Piso Rotocolor Angra",
-      "template": "piso-rotocolor-angra",
-      "descricao": "44,75x44,75 bege claro",
-      "marca": "Formigres",
-      "valor": "10,90",
-      "src": "assets/images/thumb-lightbox-produtos.png"
-    },
-    {
-      "id": 7,
-      "nome": "Piso Rotocolor Angra",
-      "template": "piso-rotocolor-angra",
-      "descricao": "44,75x44,75 bege claro",
-      "marca": "Formigres",
-      "valor": "10,90",
-      "src": "assets/images/thumb-lightbox-produtos.png"
-    }
   ]
+
+
 }

@@ -4,8 +4,8 @@ import { HttpClient } from '@angular/common/http';
 import { Categoria } from './categoria';
 import { tap, delay, take } from 'rxjs/operators';
 import { environment } from '../environments/environment';
-import { Subcategoria1 } from './subcategorias1';
 import { Produtospisoserevestimentos } from './produtospisoserevestimentos';
+import { Subcategoria1 } from './subcategoria1';
 
 @Injectable({
   providedIn: 'root'

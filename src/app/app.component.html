@@ -270,19 +270,23 @@
   </div>
   <div class="modal-body">
 
+
       <div  class="container-fluid">
 
           <div class="row" *ngIf="categorias$ | async as categorias; else loadingError">
 
-                  <div *ngFor="let categoria of categorias" class="row">
-                      <div *ngFor="let subcategoria1 of categoria.subcategoria" class="col-md-3 align-items-center box-produto">
-                          <a  (click)="onMostrarProdutos(subcategoria1.template)" href="#" class="link-produto" data-toggle="modal" data-target="#exampleProdutoModal1">
+                  <li *ngFor="let categoria of categorias" class="row">
+
+                    <div *ngFor="let subcategoria1 of toArray(categoria.subcategoria); index as contador2" class="col-md-3 align-items-center box-produto">
+
+                        <a  (click)="onMostrarProdutos(subcategoria1.template)" href="#" class="link-produto" data-toggle="modal" data-target="#exampleProdutoModal1">
                             <div class="thumb-produto">
                               <img src="{{ subcategoria1.src }}" alt="image">
+
                             </div>
                             <p class="texto-subcategorias">{{ subcategoria1.nome }}</p></a>
                       </div>
-                  </div>
+                  </li>
 
           </div>
 
@@ -353,7 +357,7 @@
           <div class="row" *ngIf="categorias$ | async as categorias; else loadingError">
 
                   <div *ngFor="let categoria of categorias" class="row">
-                      <div *ngFor="let subcategoria1 of categoria.subcategoria" class="col-md-3 align-items-center box-produto">
+                      <div *ngFor="let subcategoria1 of toArray(categoria.subcategoria)" class="col-md-3 align-items-center box-produto">
                           <a  (click)="onMostrarProdutos(subcategoria1.template)" href="#" class="link-produto" data-toggle="modal" data-target="#exampleProdutoModal1">
                             <div class="thumb-produto">
                               <img src="{{ subcategoria1.src }}" alt="image">

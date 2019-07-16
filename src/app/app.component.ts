@@ -23,6 +23,13 @@ export class AppComponent implements OnInit {
   bsModalRef: BsModalRef;
 
 
+  toArray(answers: object) {
+    return Object.keys(answers).map(key => answers[key])
+  }
+
+
+
+
   // mostrar popup no template
   // deleteModalRef: BsModalRef;
   // @ViewChild('deleteModal') deleteModal;
@@ -36,7 +43,7 @@ export class AppComponent implements OnInit {
 
   categorias: Categoria[];
   // categorias: Categoria[];
-  // categorias$: Observable<Categoria[]>;
+  categorias$: Observable<Categoria[]>;
   subcategoria1$: Observable<Subcategoria1[]>;
   produtospisoserevestimentos$: Observable<Produtospisoserevestimentos[]>;
   error$ = new Subject<boolean>();
@@ -46,14 +53,16 @@ export class AppComponent implements OnInit {
   // items = this.categorias$;
 
   constructor(private modalService: BsModalService,
-              private AppProdutoCategoriasService: AppProdutoCategoriasService) {}
+              private service: AppProdutoCategoriasService) {}
 
 
 
   ngOnInit() {
 
-    this.AppProdutoCategoriasService.categorias()
-      .subscribe(categorias => this.categorias = categorias)
+
+
+    // this.AppProdutoCategoriasService.categorias()
+    //   .subscribe(categorias => this.categorias = categorias)
     // this.service.list()
     // .subscribe(dados => this.categorias = dados);
 
@@ -63,25 +72,30 @@ export class AppComponent implements OnInit {
 
 
 
-    // this.onRefresh()
+     this.onRefresh()
+
+  }
 
 
 
 
 
+   onRefresh(){
+    this.categorias$ = this.service.list()
+     .pipe(
+      catchError(error => {
+         console.error(error);
+         this.error$.next(true);
+         // operador do rxjs catcherror para capturar o erro e retornar outro observable
+         // tslint:disable-next-line: deprecation
+        return empty();
+       })
+     );
 
 
-  // onRefresh(){
-  //   this.categorias$ = this.service.list()
-  //   .pipe(
-  //     catchError(error => {
-  //       console.error(error);
-  //       this.error$.next(true);
-  //       // operador do rxjs catcherror para capturar o erro e retornar outro observable
-  //       // tslint:disable-next-line: deprecation
-  //       return empty();
-  //     })
-  //   );
+
+
+
 
     // this.subcategoria1$ = this.service.list2()
     // .pipe(

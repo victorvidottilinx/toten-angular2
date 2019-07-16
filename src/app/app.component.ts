@@ -34,9 +34,9 @@ export class AppComponent implements OnInit {
   categoriaSelecionada: any;
 
 
-
+  categorias: Categoria[];
   // categorias: Categoria[];
-  categorias$: Observable<Categoria[]>;
+  // categorias$: Observable<Categoria[]>;
   subcategoria1$: Observable<Subcategoria1[]>;
   produtospisoserevestimentos$: Observable<Produtospisoserevestimentos[]>;
   error$ = new Subject<boolean>();
@@ -46,56 +46,64 @@ export class AppComponent implements OnInit {
   // items = this.categorias$;
 
   constructor(private modalService: BsModalService,
-              private service: AppProdutoCategoriasService) {}
+              private AppProdutoCategoriasService: AppProdutoCategoriasService) {}
 
 
 
   ngOnInit() {
+
+    this.AppProdutoCategoriasService.categorias()
+      .subscribe(categorias => this.categorias = categorias)
     // this.service.list()
     // .subscribe(dados => this.categorias = dados);
 
     // se inscrever no observable e listar as categorias
     // consumindo o método list
 
-    this.onRefresh()
-
-  }
 
 
 
-  onRefresh(){
-    this.categorias$ = this.service.list()
-    .pipe(
-      catchError(error => {
-        console.error(error);
-        this.error$.next(true);
-        // operador do rxjs catcherror para capturar o erro e retornar outro observable
-        // tslint:disable-next-line: deprecation
-        return empty();
-      })
-    );
+    // this.onRefresh()
 
-    this.subcategoria1$ = this.service.list2()
-    .pipe(
-      catchError(error => {
-        console.error(error);
-        this.error$.next(true);
-        // operador do rxjs catcherror para capturar o erro e retornar outro observable
-        // tslint:disable-next-line: deprecation
-        return empty();
-      })
-    );
 
-    this.produtospisoserevestimentos$ = this.service.list3()
-    .pipe(
-      catchError(error => {
-        console.error(error);
-        this.error$.next(true);
-        // operador do rxjs catcherror para capturar o erro e retornar outro observable
-        // tslint:disable-next-line: deprecation
-        return empty();
-      })
-    );
+
+
+
+
+
+  // onRefresh(){
+  //   this.categorias$ = this.service.list()
+  //   .pipe(
+  //     catchError(error => {
+  //       console.error(error);
+  //       this.error$.next(true);
+  //       // operador do rxjs catcherror para capturar o erro e retornar outro observable
+  //       // tslint:disable-next-line: deprecation
+  //       return empty();
+  //     })
+  //   );
+
+    // this.subcategoria1$ = this.service.list2()
+    // .pipe(
+    //   catchError(error => {
+    //     console.error(error);
+    //     this.error$.next(true);
+    //     // operador do rxjs catcherror para capturar o erro e retornar outro observable
+    //     // tslint:disable-next-line: deprecation
+    //     return empty();
+    //   })
+    // );
+
+    // this.produtospisoserevestimentos$ = this.service.list3()
+    // .pipe(
+    //   catchError(error => {
+    //     console.error(error);
+    //     this.error$.next(true);
+    //     // operador do rxjs catcherror para capturar o erro e retornar outro observable
+    //     // tslint:disable-next-line: deprecation
+    //     return empty();
+    //   })
+    // );
 
     // this.service.list()
     // .pipe(

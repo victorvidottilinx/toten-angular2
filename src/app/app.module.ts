@@ -1,3 +1,8 @@
+import { Http } from '@angular/Http';
+
+
+import { HttpClientModule } from '@angular/common/http';
+
 //import { ProdutosModalComponent } from './shared/produtos-modal/produtos-modal.component';
 
 import { BrowserModule } from '@angular/platform-browser';
@@ -13,9 +18,10 @@ import { ProdutosModalDecoracaoComponent } from './produtos-modal-decoracao/prod
 import { DecoracaoProdutosComponent } from './produtos-modal-decoracao/decoracao-produtos/decoracao-produtos.component';
 import { routing } from './produtos-modal-decoracao/app.routing';
 import { DecoracaoCategoriasComponent } from './produtos-modal-decoracao/decoracao-categorias/decoracao-categorias.component';
-import { HttpClientModule } from '@angular/common/http';
+
 
 import { KeysPipe } from './keys.pipe';
+import { FormBuilder, FormControl, FormGroup, FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -35,7 +41,9 @@ import { KeysPipe } from './keys.pipe';
     ModalModule.forRoot(),
     SharedModule,
     routing,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   entryComponents: [

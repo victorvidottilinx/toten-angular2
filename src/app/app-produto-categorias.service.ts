@@ -1,15 +1,17 @@
-// import { Observable } from 'rxjs/Observable';
-//import 'rxjs/add/operator/observable';
+import { Observable } from 'rxjs';
+// import 'rxjs/add/operator/observable';
 
 
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-
+import { HttpClient, HttpParams } from '@angular/common/http';
+import { Http } from '@angular/http';
+// import {Observable} from 'rxjs/Observable';
 import { Categoria } from './categoria';
 import { tap, delay, take, map } from 'rxjs/operators';
 import { environment } from '../environments/environment';
 import { Produtospisoserevestimentos } from './produtospisoserevestimentos';
 import { Subcategoria1 } from './subcategoria1';
+// import 'rxjs/add/operator/map';
 // import 'rxjs/add/operator/map';
 // import { observable } from 'rxjs';
 
@@ -25,27 +27,45 @@ export class AppProdutoCategoriasService {
 
 
 
-  constructor(private http: HttpClient) { }
+   constructor(private http: HttpClient) { }
 
 
  // aula 2
-  // categorias(): Observable<Categoria[]> {
-  //   return this.http.get(this.API).
-  //     map( response => response.json())
+  // categorias(): Observable<Categoria[]>{
+  //    return this.http.get(this.API)
+  //   .map(response => response.json())
+  //  }
 
-  // }
 
 
   // método list retorna o observable que faz a chamada http para a base de dados json
  list() {
-     return this.http.get<Categoria[]>(this.API)
-    // .map( response => response.json())
-     .pipe(
+      // let params: HttpParams = undefined
+      // if (search){
+      //   params = new HttpParams().append('q', search)
+      // }
+      return this.http.get<Categoria[]>(this.API)
+     // .map( response => response.json())
+      .pipe(
       // delay (2000),
-       take(1),
-       tap(console.log)
-     );
-   }
+        take(1),
+        tap(console.log)
+      );
+    }
+
+
+
+    // categorias(search?: string): Observable<Categoria[]> {
+    //   let params: HttpParams = null;
+    //   if (search) {
+    //     params = new HttpParams().append('q', search)
+    //   }
+    //   return this.http.get<Categoria[]>(this.API, {params: params})
+    // }
+
+
+
+
 
 
 

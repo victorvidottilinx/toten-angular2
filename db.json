@@ -81,37 +81,103 @@
           "id": 2,
           "nome": "Argamassa e Rejunte",
           "template": "argamassa-e-rejunte",
-          "src": "assets/images/thumb-produto.png"
+          "src": "assets/images/thumb-produto.png",
+          "subcategoria_argamassa_e_rejunte": [
+            {
+              "id": 1,
+              "nome": "Piso Rotocolor Angra",
+              "template": "piso-rotocolor-angra",
+              "descricao": "44,75x44,75 bege claro",
+              "marca": "Formigres",
+              "valor": "10,90",
+              "src": "assets/images/thumb-lightbox-produtos.png"
+            }
+          ]
         },
         {
           "id": 3,
           "nome": "Pastilhas",
           "template": "pastilhas",
-          "src": "assets/images/thumb-produto.png"
+          "src": "assets/images/thumb-produto.png",
+          "subcategoria_pastilhas": [
+            {
+              "id": 1,
+              "nome": "Piso Rotocolor Angra",
+              "template": "piso-rotocolor-angra",
+              "descricao": "44,75x44,75 bege claro",
+              "marca": "Formigres",
+              "valor": "10,90",
+              "src": "assets/images/thumb-lightbox-produtos.png"
+            }
+          ]
         },
         {
           "id": 4,
           "nome": "Pisos",
           "template": "pisos",
-          "src": "assets/images/thumb-produto.png"
+          "src": "assets/images/thumb-produto.png",
+          "subcategoria_pisos": [
+            {
+              "id": 1,
+              "nome": "Piso Rotocolor Angra",
+              "template": "piso-rotocolor-angra",
+              "descricao": "44,75x44,75 bege claro",
+              "marca": "Formigres",
+              "valor": "10,90",
+              "src": "assets/images/thumb-lightbox-produtos.png"
+            }
+          ]
         },
         {
           "id": 5,
           "nome": "Porcelanatos",
           "template": "porcelanatos",
-          "src": "assets/images/thumb-produto.png"
+          "src": "assets/images/thumb-produto.png",
+          "subcategoria_porcelanatos": [
+            {
+              "id": 1,
+              "nome": "Piso Rotocolor Angra",
+              "template": "piso-rotocolor-angra",
+              "descricao": "44,75x44,75 bege claro",
+              "marca": "Formigres",
+              "valor": "10,90",
+              "src": "assets/images/thumb-lightbox-produtos.png"
+            }
+          ]
         },
         {
           "id": 6,
           "nome": "Revestimentos",
           "template": "revestimentos",
-          "src": "assets/images/thumb-produto.png"
+          "src": "assets/images/thumb-produto.png",
+          "subcategoria_revestimentos": [
+            {
+              "id": 1,
+              "nome": "Piso Rotocolor Angra",
+              "template": "piso-rotocolor-angra",
+              "descricao": "44,75x44,75 bege claro",
+              "marca": "Formigres",
+              "valor": "10,90",
+              "src": "assets/images/thumb-lightbox-produtos.png"
+            }
+          ]
         },
         {
           "id": 7,
           "nome": "Peças Especiais",
           "template": "pecas-especiais",
-          "src": "assets/images/thumb-produto.png"
+          "src": "assets/images/thumb-produto.png",
+          "subcategoria_pecas_especiais": [
+            {
+              "id": 1,
+              "nome": "Piso Rotocolor Angra",
+              "template": "piso-rotocolor-angra",
+              "descricao": "44,75x44,75 bege claro",
+              "marca": "Formigres",
+              "valor": "10,90",
+              "src": "assets/images/thumb-lightbox-produtos.png"
+            }
+          ]
         }
       ]
 
@@ -125,64 +191,10 @@
       "subcategoria": [
         {
           "id": 1,
-          "nome": "sxflsdkfdflso",
-          "template": "acabamentos-para-piso-produtos",
+          "nome": "Portas",
+          "template": "portas",
           "src": "assets/images/pisos-e-revestimentos.png",
-          "subcategoria_pisos_e_revestimentos_produtos": [
-            {
-              "id": 1,
-              "nome": "Piso Rotocolor Angra",
-              "template": "piso-rotocolor-angra",
-              "descricao": "44,75x44,75 bege claro",
-              "marca": "Formigres",
-              "valor": "10,90",
-              "src": "assets/images/thumb-lightbox-produtos.png"
-            },
-            {
-              "id": 2,
-              "nome": "Piso Rotocolor Angra",
-              "template": "piso-rotocolor-angra",
-              "descricao": "44,75x44,75 bege claro",
-              "marca": "Formigres",
-              "valor": "10,90",
-              "src": "assets/images/thumb-lightbox-produtos.png"
-            },
-            {
-              "id": 3,
-              "nome": "Piso Rotocolor Angra",
-              "template": "piso-rotocolor-angra",
-              "descricao": "44,75x44,75 bege claro",
-              "marca": "Formigres",
-              "valor": "10,90",
-              "src": "assets/images/thumb-lightbox-produtos.png"
-            },
-            {
-              "id": 4,
-              "nome": "Piso Rotocolor Angra",
-              "template": "piso-rotocolor-angra",
-              "descricao": "44,75x44,75 bege claro",
-              "marca": "Formigres",
-              "valor": "10,90",
-              "src": "assets/images/thumb-lightbox-produtos.png"
-            },
-            {
-              "id": 5,
-              "nome": "Piso Rotocolor Angra",
-              "template": "piso-rotocolor-angra",
-              "descricao": "44,75x44,75 bege claro",
-              "marca": "Formigres",
-              "valor": "10,90",
-              "src": "assets/images/thumb-lightbox-produtos.png"
-            },
-            {
-              "id": 6,
-              "nome": "Piso Rotocolor Angra",
-              "template": "piso-rotocolor-angra",
-              "descricao": "44,75x44,75 bege claro",
-              "marca": "Formigres",
-              "valor": "10,90",
-              "src": "assets/images/thumb-lightbox-produtos.png"
-            },
+          "subcategoria_portas": [
             {
               "id": 7,
               "nome": "Piso Rotocolor Angra",
@@ -196,39 +208,54 @@
         },
         {
           "id": 2,
-          "nome": "Argasdfsdfsdfsdsa e Rejunte",
-          "template": "argamassa-e-rejunte",
-          "src": "assets/images/thumb-produto.png"
+          "nome": "Janelas",
+          "template": "janelas",
+          "src": "assets/images/thumb-produto.png",
+          "subcategoria_janelas": [
+            {
+              "id": 7,
+              "nome": "Piso Rotocolor Angra",
+              "template": "piso-rotocolor-angra",
+              "descricao": "44,75x44,75 bege claro",
+              "marca": "Formigres",
+              "valor": "10,90",
+              "src": "assets/images/thumb-lightbox-produtos.png"
+            }
+          ]
         },
         {
           "id": 3,
-          "nome": "Pasfdfsflhas",
-          "template": "pastilhas",
-          "src": "assets/images/thumb-produto.png"
+          "nome": "Batentes, Guarnições e Acessórios",
+          "template": "batentes-guarnicoes-e-acessorios",
+          "src": "assets/images/thumb-produto.png",
+          "subcategoria_batentes_guarnicoes_e_acessorios": [
+            {
+              "id": 7,
+              "nome": "Piso Rotocolor Angra",
+              "template": "piso-rotocolor-angra",
+              "descricao": "44,75x44,75 bege claro",
+              "marca": "Formigres",
+              "valor": "10,90",
+              "src": "assets/images/thumb-lightbox-produtos.png"
+            }
+          ]
         },
         {
           "id": 4,
-          "nome": "fdsdfsfsos",
-          "template": "pisos",
-          "src": "assets/images/thumb-produto.png"
-        },
-        {
-          "id": 5,
-          "nome": "Porfsdfsanatos",
-          "template": "porcelanatos",
-          "src": "assets/images/thumb-produto.png"
-        },
-        {
-          "id": 6,
-          "nome": "Revsdfsfmentos",
-          "template": "revestimentos",
-          "src": "assets/images/thumb-produto.png"
-        },
-        {
-          "id": 7,
-          "nome": "Peças Especiais",
-          "template": "pecas-especiais",
-          "src": "assets/images/thumb-produto.png"
+          "nome": "Fechaduras e Acessórios",
+          "template": "fechaduras-e-acessorios",
+          "src": "assets/images/thumb-produto.png",
+          "subcategoria_fechaduras_e_acessorios": [
+            {
+              "id": 7,
+              "nome": "Piso Rotocolor Angra",
+              "template": "piso-rotocolor-angra",
+              "descricao": "44,75x44,75 bege claro",
+              "marca": "Formigres",
+              "valor": "10,90",
+              "src": "assets/images/thumb-lightbox-produtos.png"
+            }
+          ]
         }
       ]
 

@@ -6,11 +6,11 @@ import { AlertModalComponent } from './shared/alert-modal/alert-modal.component'
 import { OutletModalComponent } from './shared/outlet-modal/outlet-modal.component';
 import { AppProdutoCategoriasService } from './app-produto-categorias.service';
 import { Observable, empty, Subject } from 'rxjs';
-import { catchError } from 'rxjs/operators';
+import { catchError, switchMap, tap, debounceTime, distinctUntilChanged } from 'rxjs/operators';
 import { Categoria } from './categoria';
 import { Subcategoria1 } from './subcategoria1';
 import { Produtospisoserevestimentos } from './produtospisoserevestimentos';
-
+import {FormBuilder, FormControl, FormGroup, FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 
 @Component({
@@ -23,9 +23,7 @@ export class AppComponent implements OnInit {
   bsModalRef: BsModalRef;
 
 
-  toArray(answers: object) {
-    return Object.keys(answers).map(key => answers[key])
-  }
+
 
 
 
@@ -48,21 +46,69 @@ export class AppComponent implements OnInit {
   produtospisoserevestimentos$: Observable<Produtospisoserevestimentos[]>;
   error$ = new Subject<boolean>();
 
-  // pipe
-  // filterargs1 = {categoria: subcategoria};
-  // items = this.categorias$;
+  // barra de busca - códigos
+  searchForm: FormGroup;
+  searchControl: FormControl;
 
   constructor(private modalService: BsModalService,
-              private service: AppProdutoCategoriasService) {}
+              private service: AppProdutoCategoriasService,
+              private fb: FormBuilder) {}
 
 
 
   ngOnInit() {
 
+    // codigos do formulario de busca
+    // instancia do searchControl
+      this.searchControl = this.fb.control('');
+      this.searchForm = this.fb.group({
+        searchControl: this.searchControl
+      });
 
 
+
+      //  this.searchControl.valueChanges
+      //   .pipe(
+      //     debounceTime(500),
+      //     distinctUntilChanged(),
+      //     switchMap(searchTerm =>
+      //       this.AppProdutoCategoriasService
+      //         .categorias(searchTerm)
+      //         .pipe(catchError(error => from([]))))
+      //     ).subscribe(categorias => this.categorias = categorias)
+
+
+      //     this.AppProdutoCategoriasService.categorias()
+      //       .subscribe(categoria => this.categorias = categoria)
+
+
+
+
+
+
+
+      // voltar
+      // this.searchControl.valueChanges
+      //   .subscribe(searchTerm => console.log(searchTerm));
+
+
+      // BUSCA
+      //  this.searchControl.valueChanges
+      //  .switchMap(searchTerm =>
+      //    this.AppProdutoCategoriasService.list(searchTerm));
+      //  .subscribe(list => this.list = list);
+
+      //  this.AppProdutoCategoriasService.list()
+      //    .subscribe(list => this.list = list);
+
+
+
+    // aula2
     // this.AppProdutoCategoriasService.categorias()
-    //   .subscribe(categorias => this.categorias = categorias)
+    //    .subscribe(categorias => this.categorias = categorias)
+
+
+
     // this.service.list()
     // .subscribe(dados => this.categorias = dados);
 
@@ -71,69 +117,30 @@ export class AppComponent implements OnInit {
 
 
 
-
-     this.onRefresh()
-
-  }
-
-
-
-
-
-   onRefresh(){
-    this.categorias$ = this.service.list()
-     .pipe(
-      catchError(error => {
-         console.error(error);
-         this.error$.next(true);
-         // operador do rxjs catcherror para capturar o erro e retornar outro observable
-         // tslint:disable-next-line: deprecation
-        return empty();
-       })
-     );
-
-
-
-
-
-
-    // this.subcategoria1$ = this.service.list2()
-    // .pipe(
-    //   catchError(error => {
-    //     console.error(error);
-    //     this.error$.next(true);
-    //     // operador do rxjs catcherror para capturar o erro e retornar outro observable
-    //     // tslint:disable-next-line: deprecation
-    //     return empty();
-    //   })
-    // );
-
-    // this.produtospisoserevestimentos$ = this.service.list3()
-    // .pipe(
-    //   catchError(error => {
-    //     console.error(error);
-    //     this.error$.next(true);
-    //     // operador do rxjs catcherror para capturar o erro e retornar outro observable
-    //     // tslint:disable-next-line: deprecation
-    //     return empty();
-    //   })
-    // );
-
-    // this.service.list()
-    // .pipe(
-    //   // operador do pipe
-    //   catchError(error => empty())
-    // )
-    // .subscribe(
-    //   dados => {
-    //     console.log(dados);
-    //   },
-    //   error => console.error(error),
-    //   () => console.log('Observable completo!')
-    // );
-
+    // REABILITAR1
+      this.onRefresh();
 
   }
+
+
+
+
+  // REABILITAR1
+    onRefresh(){
+     this.categorias$ = this.service.list()
+      .pipe(
+       catchError(error => {
+          console.error(error);
+          this.error$.next(true);
+          // operador do rxjs catcherror para capturar o erro e retornar outro observable
+          // tslint:disable-next-line: deprecation
+         return empty();
+        })
+      );
+   }
+
+
+
 
 
   openModal() {
